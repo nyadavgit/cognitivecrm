@@ -1,4 +1,6 @@
+
 #Read Json Data
+
 library(jsonlite)
 inputData <- fromJSON("output10json.txt")
 
@@ -30,4 +32,15 @@ for (words in inputData$Regions$Lines[[1]]$Words)
        }
         Line_number <- Line_number + 1
 }
+#Base Region top left corner to 0,0 and adjust each word position accordingly
+outputdata$Position_top <- outputdata$Position_top - inputData$Regions$Rectangle$Top
+outputdata$Position_left <- outputdata$Position_left - inputData$Regions$Rectangle$Left
+
+#Scale Height and Width to 100:60
+outputdata$Size_height <- outputdata$Size_height / (inputData$Regions$Rectangle$Height/60)
+outputdata$Size_width <- outputdata$Size_width / (inputData$Regions$Rectangle$Width/100)
+
+outputdata$Position_top <- outputdata$Position_top / (inputData$Regions$Rectangle$Height/60)
+outputdata$Position_left <- outputdata$Position_left / (inputData$Regions$Rectangle$Width/100)
+
 
