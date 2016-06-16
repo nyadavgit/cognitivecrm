@@ -1,0 +1,45 @@
+Name:
+{
+	FirstName
+	MiddleName
+	LastName
+}
+
+Designation
+
+
+Company Name:
+
+Phone Label:
+PhoneNumber
+
+Fax Label:
+FaxNumbers
+
+
+Address label:
+Address {
+Address Line 1:
+Address Line 2:
+Address Line 3:
+City:
+State:
+Zip Code:
+
+}
+
+WebSite label:
+WebSite :
+
+Email Address
+
+Twitter label:
+
+Twitter:
+
+Facebook Label:
+Facebook:
+
+Ignore Text[]
+{
+}
