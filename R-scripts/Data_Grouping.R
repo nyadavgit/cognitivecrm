@@ -7,7 +7,7 @@ groupDataFunction <- function(filename)
 
         #Merged Data by group 
         outputmergeddata <- data.frame(matrix(nrow=0,ncol=8))
-        colnames(outputmergeddata) <- c("Text","Label", "Position_top", "Position_left", "Size_height", "Size_width", "Group_No") 
+        colnames(outputmergeddata) <- c("Text","Label_No","Label", "Position_top", "Position_left", "Size_height", "Size_width", "Group_No") 
 
 
         Group_number <- 1
@@ -19,11 +19,19 @@ groupDataFunction <- function(filename)
                         words <- inputData$Regions$Lines[[region_count]]$Words[[word_count]]
                 
                         group_label <- ""
+                        group_label_no <- ""
                         group_word <- ""
                         l <- length(words$Text)
                         for (len in 1:l)
                         {
-                                newRow <- data.frame(Text = words$Text[len],Position_top = words$Rectangle$Top[len] , Position_left= words$Rectangle$Left[len] , Size_height = words$Rectangle$Height[len], Size_width = words$Rectangle$Width[len], Label = "", Group_No = Group_number )
+                                newRow <- data.frame(Text = words$Text[len],
+                                                     Position_top = words$Rectangle$Top[len] , 
+                                                     Position_left= words$Rectangle$Left[len] , 
+                                                     Size_height = words$Rectangle$Height[len], 
+                                                     Size_width = words$Rectangle$Width[len], 
+                                                     Label = "", 
+                                                     Group_No = Group_number,
+                                                     Label_No = "")
                                 #Group words on same line with Space as seperator
                                 if(group_word == "")
                                 {
@@ -36,18 +44,24 @@ groupDataFunction <- function(filename)
                                 #Check Email Address Format
                                 if(length(grep("(@)",newRow$Text)) > 0 )
                                 {
-                                        newRow$Label <- "Email Address"
+                                        newRow$Label <- paste("EmailAddress1")
                                         group_label <- newRow$Label
-                                
+                                        group_label_no <- "9"
                                 }
                                 #Check Phone Number Format
                                 if(length(grep("^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$",newRow$Text)) > 0)
                                 {
-                                        newRow$Label <- "Phone Number" 
+                                        newRow$Label <- paste("PhoneNumber1") 
                                         group_label <- newRow$Label
+                                        group_label_no <- "2"
                                 }
                         }
-                        newmergedRow <- data.frame(Text = group_word, Label = group_label, Group_No = Group_number, Position_top = inputData$Regions$Lines[[region_count]]$Rectangle$Top[word_count],Position_left = inputData$Regions$Lines[[region_count]]$Rectangle$Left[word_count], Size_height = inputData$Regions$Lines[[region_count]]$Rectangle$Height[word_count], Size_width = inputData$Regions$Lines[[region_count]]$Rectangle$Width[word_count] )
+                        newmergedRow <- data.frame(Text = group_word, Label = group_label,
+                                                   Group_No = Group_number, Label_No = group_label_no,
+                                                   Position_top = inputData$Regions$Lines[[region_count]]$Rectangle$Top[word_count],
+                                                   Position_left = inputData$Regions$Lines[[region_count]]$Rectangle$Left[word_count], 
+                                                   Size_height = inputData$Regions$Lines[[region_count]]$Rectangle$Height[word_count], 
+                                                   Size_width = inputData$Regions$Lines[[region_count]]$Rectangle$Width[word_count] )
                         outputmergeddata <- rbind(outputmergeddata,data.frame(newmergedRow))
                         Group_number <- Group_number + 1 
                }
