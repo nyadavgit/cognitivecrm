@@ -13,3 +13,6 @@ C:\dev\hack\RNET\RNET\obj\Debug\RNET.pdb
 C:\dev\github\cognitivecrm\RNET\RNET\bin\Debug\RNET.exe.config
 C:\dev\github\cognitivecrm\RNET\RNET\obj\Debug\RNET.exe
 C:\dev\github\cognitivecrm\RNET\RNET\obj\Debug\RNET.pdb
+C:\dev\githubwork\cognitivecrm\RNET\RNET\bin\Debug\RNET.exe.config
+C:\dev\githubwork\cognitivecrm\RNET\RNET\obj\Debug\RNET.exe
+C:\dev\githubwork\cognitivecrm\RNET\RNET\obj\Debug\RNET.pdb
