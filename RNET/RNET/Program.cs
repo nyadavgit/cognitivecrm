@@ -15,10 +15,9 @@ namespace RNET
             REngine engine = REngine.GetInstance();
             engine.Initialize();
 
-
-            string text = File.ReadAllText(@"C:\dev\githubwork\cognitivecrm\R-scripts\Data_Grouping.r");
+            string text = File.ReadAllText(@"C:\dev\github\cognitivecrm\R-scripts\Data_Grouping.r");
             var myFunc = engine.Evaluate(text).AsFunction();
-            var v1 = engine.CreateCharacter(@"C:\dev\githubwork\cognitivecrm\R-scripts\output10json.txt");
+            var v1 = engine.CreateCharacter(@"C:\dev\github\cognitivecrm\R-scripts\output10json.txt");
             var df = myFunc.Invoke(new SymbolicExpression[] { v1 }).AsDataFrame();
 
             Console.Write("click to finish ...");
