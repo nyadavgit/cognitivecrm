@@ -1,0 +1,15 @@
+C:\dev\hack\RNET\RNET\bin\Debug\RNET.exe.config
+C:\dev\hack\RNET\RNET\bin\Debug\RNET.exe
+C:\dev\hack\RNET\RNET\bin\Debug\RNET.pdb
+C:\dev\hack\RNET\RNET\bin\Debug\DynamicInterop.dll
+C:\dev\hack\RNET\RNET\bin\Debug\RDotNet.dll
+C:\dev\hack\RNET\RNET\bin\Debug\RDotNet.NativeLibrary.dll
+C:\dev\hack\RNET\RNET\bin\Debug\DynamicInterop.xml
+C:\dev\hack\RNET\RNET\bin\Debug\RDotNet.xml
+C:\dev\hack\RNET\RNET\bin\Debug\RDotNet.NativeLibrary.xml
+C:\dev\hack\RNET\RNET\obj\Debug\RNET.csprojResolveAssemblyReference.cache
+C:\dev\hack\RNET\RNET\obj\Debug\RNET.exe
+C:\dev\hack\RNET\RNET\obj\Debug\RNET.pdb
+C:\dev\github\cognitivecrm\RNET\RNET\bin\Debug\RNET.exe.config
+C:\dev\github\cognitivecrm\RNET\RNET\obj\Debug\RNET.exe
+C:\dev\github\cognitivecrm\RNET\RNET\obj\Debug\RNET.pdb
