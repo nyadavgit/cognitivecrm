@@ -9,10 +9,11 @@ using System.Collections;
 
 namespace CognitiveCrmMobile.Core.Model
 {
-    public class BusinessCardGroup
+    public class CardGroup
     {
+        public int id { get; set; }
         public string Title { get; set; }
         public string ImagePath { get; set; }
-        public List<BusinessCard> BusinessCards { get; set; }
+        public List<Card> BusinessCards { get; set; }
 }
 }
