@@ -1,4 +1,6 @@
-﻿using RDotNet;
+﻿using System;
+using System.Data;
+using RDotNet;
 using System.IO;
 
 namespace CognitativeCrmVision.Repository
@@ -15,6 +17,8 @@ namespace CognitativeCrmVision.Repository
             var myFunc = engine.Evaluate(text).AsFunction();
             var v1 = engine.CreateCharacter(jsonResponse);
             var df = myFunc.Invoke(new SymbolicExpression[] { v1 }).AsDataFrame();
+
+            //var dt = RDataFrameToDataSet(df);
 
             return df;
         }

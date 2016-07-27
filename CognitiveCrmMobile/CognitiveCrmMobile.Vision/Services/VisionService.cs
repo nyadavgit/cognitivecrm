@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Data;
 using System.IO;
 using CognitativeCrmVision.Repository;
 using Newtonsoft.Json;
@@ -24,8 +25,8 @@ namespace CognitativeCrmVision.Services
                 scriptFile = ConfigurationManager.AppSettings.Get("FilePath") + @"\" +
                              ConfigurationManager.AppSettings.Get("FileName");
             }
-            var dframe = RnetRepository.RunRScript(scriptFile, jsonResponse);
-            return dframe;
+            var dt = RnetRepository.RunRScript(scriptFile, jsonResponse);
+            return dt;
         }
     }
 }
