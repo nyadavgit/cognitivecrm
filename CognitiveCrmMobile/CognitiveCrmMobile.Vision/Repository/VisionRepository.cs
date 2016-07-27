@@ -8,13 +8,8 @@ namespace CognitativeCrmVision.Repository
 {
     public class VisionRepository : ImageScenario
     {
-        //public async Task<AnalysisResult> UploadAndAnalyzeImage(string imageFilePath)
         private static async Task<AnalysisResult> UploadAndAnalyzeImage(Stream image)
         {
-            // -----------------------------------------------------------------------
-            // KEY SAMPLE CODE STARTS HERE
-            // -----------------------------------------------------------------------
-
             //
             // Create Project Oxford Vision API Service client
             //
