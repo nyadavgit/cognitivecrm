@@ -25,3 +25,15 @@ C:\dev\github\cognitivecrm\RNET\RNET\bin\Debug\DynamicInterop.xml
 C:\dev\github\cognitivecrm\RNET\RNET\bin\Debug\RDotNet.xml
 C:\dev\github\cognitivecrm\RNET\RNET\bin\Debug\RDotNet.NativeLibrary.xml
 C:\dev\github\cognitivecrm\RNET\RNET\obj\Debug\RNET.csprojResolveAssemblyReference.cache
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RNET.exe.config
+C:\projects\Hackathon\crmcognitive\RNET\RNET\obj\Debug\RNET.exe
+C:\projects\Hackathon\crmcognitive\RNET\RNET\obj\Debug\RNET.pdb
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RNET.exe
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RNET.pdb
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\DynamicInterop.dll
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RDotNet.dll
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RDotNet.NativeLibrary.dll
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\DynamicInterop.xml
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RDotNet.xml
+C:\projects\Hackathon\crmcognitive\RNET\RNET\bin\Debug\RDotNet.NativeLibrary.xml
+C:\projects\Hackathon\crmcognitive\RNET\RNET\obj\Debug\RNET.csprojResolveAssemblyReference.cache
