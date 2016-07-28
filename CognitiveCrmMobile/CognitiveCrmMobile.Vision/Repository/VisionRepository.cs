@@ -10,16 +10,18 @@ namespace CognitativeCrmVision.Repository
     {
 
 
-        private static async Task<AnalysisResult> UploadAndAnalyzeImage(Stream image)
+        private static async Task<OcrResults> UploadAndAnalyzeImage(Stream image)
         {
             //
             // Create Project Oxford Vision API Service client
             //
             string SubscriptionKey = ConfigurationManager.AppSettings.Get("SubscriptionKey");
             var visionServiceClient = new VisionServiceClient(SubscriptionKey);
-            var visualFeatures = new VisualFeature[] { VisualFeature.Adult, VisualFeature.Categories, VisualFeature.Color, VisualFeature.Description, VisualFeature.Faces, VisualFeature.ImageType, VisualFeature.Tags };
-            return await visionServiceClient.AnalyzeImageAsync(image, visualFeatures);
+            //var visualFeatures = new VisualFeature[] { VisualFeature.Adult, VisualFeature.Categories, VisualFeature.Color, VisualFeature.Description, VisualFeature.Faces, VisualFeature.ImageType, VisualFeature.Tags };
+            //return await visionServiceClient.AnalyzeImageAsync(image, visualFeatures);
 
+            OcrResults ocrResult = await visionServiceClient.RecognizeTextAsync(image, "unk");
+            return ocrResult;
 
             //return analysisResult;
         }
@@ -30,7 +32,7 @@ namespace CognitativeCrmVision.Repository
         //    return analysisResult;
         //}
 
-        public AnalysisResult ProcessImage(Stream imageStream)
+        public OcrResults ProcessImage(Stream imageStream)
         {
             return UploadAndAnalyzeImage(imageStream).Result;
         }
