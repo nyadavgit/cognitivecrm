@@ -10,9 +10,10 @@ namespace CognitativeCrmVision.Services
 {
     public class MlService
     {
-        public void RunInvokeApi(DataFrame dataFrame)
+        public async Task<string> RunInvokeApi(DataFrame dataFrame)
         {
-            InvokeRequestResponseService(dataFrame).Wait();
+            var response = await InvokeRequestResponseService(dataFrame);
+            return response;
         }
 
         private static async Task<string> InvokeRequestResponseService(DataFrame dataFrame)
@@ -40,7 +41,7 @@ namespace CognitativeCrmVision.Services
 
                 client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/5662c016c51e4284bd73e197c362210e/services/96072a9e3be84960a92bb40552b14014/execute?api-version=2.0&details=true");
 
-                HttpResponseMessage response = await client.PostAsJsonAsync("", scoreRequest);
+                var response = await client.PostAsJsonAsync("", scoreRequest);
 
                 if (response.IsSuccessStatusCode)
                 {
