@@ -40,6 +40,7 @@ namespace CognitativeCrmVision.Services
             return response.Result;
 
         }
+
         public string CognitiveResult(Stream imageStream)
         {
             var jsonResult = GetJsonResponse(imageStream);
