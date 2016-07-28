@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/cardImageView"
+            android:layout_gravity="center_horizontal" />
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1">
+            <Button
+                android:text="Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:id="@+id/reviewButton" />
+            <Button
+                android:text="Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveButton"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+            <Button
+                android:text="Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:id="@+id/cancelButton" />
+        </RelativeLayout>
+        <TextView
+            android:text="Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Phone Number 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber1TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Phone Number 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber2TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Company Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/companyNameTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Address Line 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressLine1TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Address Line 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressLine2TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Address Line 3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressLine3TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Email Address 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailAddress1TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Email Address 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailAddress2TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/webSiteTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/designationTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Ignore Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ignoreTextTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp" />
+        <TextView
+            android:text="Name + Designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameDesignationTextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="PhoneNumber1 + PhoneNumber2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber1PhoneNumber2TextView"
+            android:paddingTop="20dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
