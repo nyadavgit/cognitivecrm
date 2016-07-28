@@ -23,7 +23,7 @@ namespace CognitativeCrmVision.Services
 
         private string GetJsonResponse(Stream imageStream)
         {
-            AnalysisResult analysis = VisionRepository.ProcessImage(imageStream);
+            OcrResults analysis = VisionRepository.ProcessImage(imageStream);
             return JsonConvert.SerializeObject(analysis);
          }
 
