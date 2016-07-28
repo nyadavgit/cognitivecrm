@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Android.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Java.IO;
 
 namespace CognitiveCrmMobile.Core.Model
 {
@@ -10,7 +12,6 @@ namespace CognitiveCrmMobile.Core.Model
     {
         public int id { get; set; }
         public bool isFavorite { get; set; }
-        public string imagePath { get; set; }
         public string name { get; set; }
         public string phoneNumber1 { get; set; }
         public string phoneNumber2 { get; set; }
@@ -25,6 +26,11 @@ namespace CognitiveCrmMobile.Core.Model
         public string ignoreText { get; set; }
         public string nameDesignation { get; set; }
         public string phoneNumber1PhoneNumber2 { get; set; }
+        public int height { get; set; }
+        public int width { get; set; }
+        public string filePath { get; set; }
+        public Bitmap bitmap { get; set; }
+        public File file { get; set; }
 
     }
 }
