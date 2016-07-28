@@ -49,32 +49,32 @@ namespace CognitativeCrmVision.Services
 
             // create a file
 
-            string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            string filepath = dir + "\\output.txt";
+            //string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            //string filepath = dir + "\\output.txt";
 
-            try
-            {
+            //try
+            //{
 
-                // Delete the file if it exists.
-                if (File.Exists(filepath))
-                {
-                    File.Delete(filepath);
-                }
+            //    // Delete the file if it exists.
+            //    if (File.Exists(filepath))
+            //    {
+            //        File.Delete(filepath);
+            //    }
 
-                // Create the file.
-                using (FileStream fs = File.Create(filepath))
-                {
-                    Byte[] info = new UTF8Encoding(true).GetBytes(jsonResult);
-                    // Add some information to the file.
-                    fs.Write(info, 0, info.Length);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            //    // Create the file.
+            //    using (FileStream fs = File.Create(filepath))
+            //    {
+            //        Byte[] info = new UTF8Encoding(true).GetBytes(jsonResult);
+            //        // Add some information to the file.
+            //        fs.Write(info, 0, info.Length);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.ToString());
+            //}
 
-            var df = GetRScriptResult(jsonResult, filepath);
+            var df = GetRScriptResult(jsonResult);
             var response = CallMlWebService(df);
             return response;
         }
